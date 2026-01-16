@@ -3,9 +3,9 @@ from models import Hero, Power, HeroPower
 
 with app.app_context():
 
-    print("Seeding database...")
+    print("Seeding database")
 
-    # Clear existing data
+
     HeroPower.query.delete()
     Hero.query.delete()
     Power.query.delete()
@@ -59,4 +59,4 @@ with app.app_context():
     db.session.add_all(hero_powers)
     db.session.commit()
 
-    print("✅ Database seeded successfully!")
+    print("Database seeded successfully!")
